@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 import { motion } from "framer-motion";
-import FullPageLoader from '../components/FullPageLoader';
+// import FullPageLoader from '../components/FullPageLoader';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
             <Navbar/>
 
             <motion.section
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="py-5 text-center bg-primary text-white">
