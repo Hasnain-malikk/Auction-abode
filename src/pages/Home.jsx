@@ -10,16 +10,16 @@ const Home = () => {
 
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // transition={{ duration: 0.5 }}
         >
             <Navbar/>
 
             <motion.section
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 className="py-5 text-center bg-primary text-white">
                 <div className="container">
                     <h1 className="display-4 fw-bold">Welcome to Auction Abode</h1>

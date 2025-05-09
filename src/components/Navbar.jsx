@@ -10,14 +10,19 @@ const Navbar = () => {
     <>
       <motion.nav
         className="navbar navbar-expand-lg navbar-dark bg-dark"
-        initial={{ y: -50, opacity: 0 }}
+        initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
       >
         <div className="container-fluid">
+        <motion.div
+              initial={{ y: -5, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}>
           <Link className="navbar-brand" to="/">
             Auction Abode 🏡
           </Link>
+              </motion.div>
           <button
             className="navbar-toggler"
             type="button"
@@ -31,21 +36,39 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
+              <motion.div 
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay:0.6 }}>
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
+              </motion.div>
+              
+              <motion.div
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay:0.7 }}>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/aboutus">
                   About Us
                 </Link>
               </li>
+              </motion.div>
+              <motion.div
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.2,delay:0.8 }}>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/contactus">
                   Contact Us
                 </Link>
               </li>
+              </motion.div>
 
               {user ? (
                 <>
@@ -108,16 +131,28 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
+                <motion.div
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.4, delay: 0.9 }}>
+
                   <li className="nav-item">
                     <Link className="nav-link" to="/login">
                       Login
                     </Link>
                   </li>
+              </motion.div>
+              <motion.div
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.6,delay:1 }}>
+
                   <li className="nav-item">
                     <Link className="nav-link" to="/register">
                       Register
                     </Link>
                   </li>
+              </motion.div>
                 </>
               )}
             </ul>
