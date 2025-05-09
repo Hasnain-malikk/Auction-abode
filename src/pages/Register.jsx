@@ -41,13 +41,14 @@ const Register = () => {
   return (
     <motion.div
       className="d-flex align-items-center justify-content-center min-vh-100 bg-dark"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
     >
           <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7 }}  
             >
       <motion.div
         className="card shadow-lg p-4"

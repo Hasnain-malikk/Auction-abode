@@ -26,14 +26,16 @@ const Login = () => {
   return (
     <motion.div
       className="d-flex align-items-center justify-content-center min-vh-100 bg-dark"
-      initial={{ opacity: 0, y: 50 }} 
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }} 
-      transition={{ duration: 0.5 }}
+      // initial={{ opacity: 0, y: 50 }} 
+      // animate={{ opacity: 1, y: 0 }}
+      // exit={{ opacity: 0, y: -50 }} 
+      // transition={{ duration: 0.5 }}
     >
       <motion.div
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+        // whileHover={{ scale: 1.02 }}
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}    
       >
         <div className="card shadow-lg p-4" style={{ width: "400px", borderRadius: "12px" }}>
           <h3 className="text-center text-primary fw-bold">Welcome Back!</h3>

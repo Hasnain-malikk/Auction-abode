@@ -17,15 +17,24 @@ const Home = () => {
             <Navbar/>
 
             <motion.section
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
                 className="py-5 text-center bg-primary text-white">
                 <div className="container">
+                    <motion.div
+                                  initial={{ y: -0, opacity: 0 }}
+                                  animate={{ y: 0, opacity: 1 }}
+                                  transition={{ duration: 1 }}>
+                    
                     <h1 className="display-4 fw-bold">Welcome to Auction Abode</h1>
+                                  </motion.div>
+                                  <motion.div
+                                                initial={{ y: -0, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{ duration: 1.2 }}>
+                                  
                     <p className="lead">
                         Revolutionizing property auctions with real-time bidding, AI-driven insights, and secure transactions.
                     </p>
+                                                </motion.div>
                     {
                         !user && <div className="mt-4">
                         <Link
